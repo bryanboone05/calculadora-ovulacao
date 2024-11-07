@@ -1,0 +1,38 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Calculador Ovulação</title>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Calculadora de Ovulação</h1>
+
+        <!-- Formulário com campos obrigatórios -->
+        <form id="formulario" onsubmit="calcularOvulacao(event)">
+            <label id="ultimaMestruacao">Informe abaixo o 1º dia da sua última menstruação:</label>
+            <input id="dataCiclo" type="date" required>
+            <label id="mediaCiclo">Em média quantos dias dura o seu ciclo menstrual?</label>
+            <select name="duracaoCiclo" id="duracaoCiclo"></select>
+            <button type="submit">Calcular</button>
+        </form>
+
+        <p id="resultado"></p>
+    </div>
+
+
+
+
+    <script src="calcularOvulacao.js"></script>
+    <script src="calcularMenstruacao.js"></script>
+</body>
+
+</html>

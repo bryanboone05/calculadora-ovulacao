@@ -1,0 +1,64 @@
+/* Centralizando o conteúdo da página */
+body {
+    font-family: "Lato", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #912f56, #521945); /*Degradê do rosa ao laranja*/
+}
+
+/* Estilos para o formulário */
+.form {
+    height: 400px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(255, 226, 80, 0.3); /* Sombra mais intensa e grande */
+    background-color: #ddd;
+}
+
+/* Estilos para labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para os inputs */
+#dataCiclo, #duracaoCiclo {
+    padding: 5px 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Tamanho normal */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta um pouco */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho normal */
+    }
+}
+
+.spanIcone {
+    margin-top: 20px;
+    display: block;
+    font-size: 40px; /* Aumentando o tamanho do emoji */
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.spanTexto {
+    color: #912f56;
+}
