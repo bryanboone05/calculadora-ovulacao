@@ -62,3 +62,12 @@ label {
 .spanTexto {
     color: #912f56;
 }
+
+button {
+    color: white;
+    background-color: #521945;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 15%;
+}
