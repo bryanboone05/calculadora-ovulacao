@@ -73,3 +73,9 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
+button:hover {
+    border: #521945;
+    background-color: #ffe2504d;
+    color: #521945;
+}
