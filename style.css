@@ -64,10 +64,12 @@ label {
 }
 
 button {
-    color: white;
-    background-color: #521945;
-    cursor: pointer;
-    padding: 10px;
+    font-style: oblique;
+    padding: 10px 20px;
+    border-radius: 20px; /* Arredonda as bordas */
     border: none;
-    border-radius: 15%;
+    background-color: #521945;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
