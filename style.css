@@ -67,15 +67,17 @@ button {
     font-style: oblique;
     padding: 10px 20px;
     border-radius: 20px; /* Arredonda as bordas */
-    border: none;
+    border: 1px solid #ffe2504d;
     background-color: #521945;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    
 }
 
 button:hover {
-    border: #521945;
+    border: 1px solid #521945;
     background-color: #ffe2504d;
     color: #521945;
 }

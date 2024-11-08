@@ -8,7 +8,7 @@ function calcularOvulacao(event) {
     let dataCiclo = new Date(document.getElementById('dataCiclo').value + "T00:00:00");
 
     // Incrementado 14 dias à data do ciclo recebida no input
-    dataCiclo.setDate(dataCiclo.getDate() + 14);
+    dataCiclo.setDate(dataCiclo.getDate() + 13);
 
     // Definindo dia da ovulação
     let diaOvulacao = dataCiclo.getDate();
