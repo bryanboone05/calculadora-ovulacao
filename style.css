@@ -37,6 +37,8 @@ label {
     margin: 10px 0;
     width: 100%;
     max-width: 300px;
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
 }
 
 
@@ -54,9 +56,9 @@ label {
 
 .spanIcone {
     margin-top: 20px;
-    display: block;
+    /* display: block; */
     font-size: 40px; /* Aumentando o tamanho do emoji */
-    animation: pulse 1s ease-in-out infinite;
+    /* animation: pulse 1s ease-in-out infinite; */
 }
 
 .spanTexto {
