@@ -1,35 +1,3 @@
-// Recebendo media dos ciclos menstruais
-let duracaoCiclo = document.getElementById("duracaoCiclo");
-
-// Transformando em inteiro
-let duracaoCicloConvertido = parseInt(duracaoCiclo.value);
-
-//Função para preencher o select com os ciclos menstruais mais comuns
-function preencherSelect() {
-    for (let i = 21; i <= 35; i++) {
-        duracaoCiclo.innerHTML += `<option value="${i}" ${i === 28 ? 'selected' : ''}>${i}</option>`;
-    }
-}
-
-//Inicializando Select
-preencherSelect();
-
-
-// Referência ao campo de entrada do ciclo menstrual
-let dataCicloInput = document.getElementById('dataCiclo');
-
-let hoje = new Date();
-dataCicloInput.value = hoje.toISOString().split("T")[0];
-
-// Abrir o seletor de data automaticamente ao clicar no campo
-dataCicloInput.addEventListener("click", () => {
-    if (dataCicloInput.showPicker) {
-        dataCicloInput.showPicker();
-    } else {
-        console.log("O método showPicker() não é suportado neste navegador.");
-    }
-});
-
 // Função para calcular o dia da proxima ovulação
 function calcularOvulacao(event) {
 
@@ -62,19 +30,10 @@ function calcularOvulacao(event) {
     //Mostrar Resultado na tela do usuário
     let resultado = document.getElementById("resultado");
     if (mesHoje == mesOvulacao) {
-        resultado.innerHTML = `A sua próxima ovulação deve acontecer entre os dias <span class = "spanTexto">${diaOvulacao}</span> e <span class = "spanTexto">${diaSeguinte}</span> desse mês! <span class = "spanIcone">💓</span>`;
+        resultado.innerHTML = `A sua ovulação deve acontecer entre os dias <span class = "spanTexto">${diaOvulacao}</span> e <span class = "spanTexto">${diaSeguinte}</span> desse mês! <span class = "spanIcone">💓</span>`;
     } else {
-        resultado.innerHTML = `A sua próxima ovulação deve acontecer entre os dias <span class = "spanTexto">${diaOvulacao}</span> e <span class = "spanTexto">${diaSeguinte}</span> do mês que vem! <span class = "spanIcone">💓</span>`;
+        resultado.innerHTML = `A sua ovulação deve acontecer entre os dias <span class = "spanTexto">${diaOvulacao}</span> e <span class = "spanTexto">${diaSeguinte}</span> do mês que vem! <span class = "spanIcone">💓</span>`;
     }
 
-    console.log(diaOvulacao, diaSeguinte);
-
-    console.log(dataCiclo);
-
-    
-
-    // Adiciona X dias para calcular a próxima menstruação
-    dataCiclo.setDate(dataCiclo.getDate() + duracaoCicloConvertido);
-    let proximaMenstruacao = dataCiclo.getDate();
-    // resultado.innerHTML += `Com base no seu ciclo a próxima menstruação deve ocorrer no dia ${proximaMenstruacao}`;
+    calcularMenstruacao();
 }
