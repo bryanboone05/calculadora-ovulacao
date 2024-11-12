@@ -1,9 +1,9 @@
 // Referência ao campo de entrada do ciclo menstrual
 let dataCicloInput = document.getElementById('dataCiclo');
 
-// Preencher automaticamente o campo data com a data de hoje
-// let hoje = new Date();
-// dataCicloInput.value = hoje.toISOString().split("T")[0];
+//Preencher automaticamente o campo data com a data de hoje
+let hoje = new Date();
+dataCicloInput.value = hoje.toISOString().split("T")[0];
 
 // Abrir o seletor de data automaticamente ao clicar no campo
 dataCicloInput.addEventListener("click", () => {
